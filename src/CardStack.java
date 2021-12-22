@@ -40,10 +40,20 @@ public class CardStack {
         numCards++;
     }
 
-    public Card removeCard(){
-        Card cardToRemove = stack.pop();
+    public Card removeCard()throws CardException{
+        Card cardToRemove;
+        try {
+            cardToRemove = stack.pop();
+        } catch (EmptyStackException e){
+            throw new CardException("Stack is empty, cannot remove card");
+        }
+
         cardList.remove(cardList.size() - 1);
-        peekStack().setFaceUp(true); // flip over the next card in the stack.
+
+        try {
+            peekStack().setFaceUp(true); // flip over the next card in the stack.
+        } catch (Exception ignored){}
+
         cardList.get(cardList.size() - 1).setFaceUp(true);
         numCards--;
         return cardToRemove;
