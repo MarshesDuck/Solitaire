@@ -93,35 +93,6 @@ public class Solitaire {
         String str = "";
         ArrayList<String[]> allStacks = new ArrayList<>(7);
 
-//        //stack1
-//        ArrayList<String> stringStack1 = stack1.stackRepresentation();
-//        allStacks.add(0, stringStack1.toArray(new String[0]));
-//
-//
-//        //stack2
-//        ArrayList<String> stringStack2 = stack2.stackRepresentation();
-//        allStacks.add(1, stringStack2.toArray(new String[0]));
-//
-//        //stack3
-//        ArrayList<String> stringStack3 = stack3.stackRepresentation();
-//        allStacks.add(2, stringStack3.toArray(new String[0]));
-//
-//        //stack4
-//        ArrayList<String> stringStack4 = stack4.stackRepresentation();
-//        allStacks.add(3, stringStack4.toArray(new String[0]));
-//
-//        //stack5
-//        ArrayList<String> stringStack5 = stack5.stackRepresentation();
-//        allStacks.add(4, stringStack5.toArray(new String[0]));
-//
-//        //stack6
-//        ArrayList<String> stringStack6 = stack6.stackRepresentation();
-//        allStacks.add(5, stringStack6.toArray(new String[0]));
-//
-//        //stack7
-//        ArrayList<String> stringStack7 = stack7.stackRepresentation();
-//        allStacks.add(6, stringStack7.toArray(new String[0]));
-
         for (int i = 0; i < 7; i++) {
             ArrayList<String> stringStack = cardStacks[i].stackRepresentation();
             allStacks.add(i, stringStack.toArray(new String[0]));
@@ -166,13 +137,6 @@ public class Solitaire {
 
     private int largestPile(){
         ArrayList<Integer> sizeArray = new ArrayList<>();
-//        sizeArray.add(stack1.getNumCards());
-//        sizeArray.add(stack2.getNumCards());
-//        sizeArray.add(stack3.getNumCards());
-//        sizeArray.add(stack4.getNumCards());
-//        sizeArray.add(stack5.getNumCards());
-//        sizeArray.add(stack6.getNumCards());
-//        sizeArray.add(stack7.getNumCards());
 
         for (int i = 0; i < 7; i++) {
             sizeArray.add(cardStacks[i].getNumCards());
