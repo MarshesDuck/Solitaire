@@ -16,9 +16,6 @@ public class Card {
         if (this.number == 1){
             numDisplay = String.valueOf('A');
         }
-        else if (this.number == 10){
-            numDisplay = "10";
-        }
         else if (this.number == 11){
             numDisplay = String.valueOf('J');
         }
@@ -30,7 +27,7 @@ public class Card {
         }
 
         else {
-            numDisplay = String.valueOf((char) (number + '0'));
+            numDisplay = String.valueOf(number);
         }
 
         this.sign = sign;
